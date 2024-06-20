@@ -38,3 +38,33 @@
 //     0 <= calls.length <= 1000
 //     calls[i] is one of "increment", "decrement" and "reset"
 
+/**
+ * @param {integer} init
+ * @return { increment: Function, decrement: Function, reset: Function }
+ */
+
+
+function createCounter(init) {
+    let currentValue = init;
+    return {
+      increment: function() {
+          currentValue += 1;
+          return currentValue;
+      },
+      decrement: function() {
+          currentValue -= 1;
+          return currentValue;
+      },
+      reset: function() {
+          currentValue = init;
+          return currentValue;
+          }
+      };
+      
+    }
+       
+const counter = createCounter(92)
+console.log(counter.increment())
+console.log(counter.reset())
+
+console.log(counter.decrement())
