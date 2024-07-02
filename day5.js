@@ -43,3 +43,26 @@
 // return result array containing the transformed elements
 
 
+
+function map(arr, fn) {
+    const result = [];
+    for (let i = 0; i < arr.length; i++) {
+      result.push(fn(arr[i], i));
+    }
+    return result;
+  }
+  
+  // ex 1
+  let arr1 = [1, 2, 3];
+  let plusone = function(n) { return n + 1; };
+  console.log(map(arr1, plusone)); // output: [2, 3, 4]
+  
+  // ex 2
+  let arr2 = [1, 2, 3];
+  let plusI = function(n, i) { return n + i; };
+  console.log(map(arr2, plusI)); // output: [1, 3, 5]
+  
+  // ex 3
+  let arr3 = [10, 20, 30];
+  let constant = function() { return 42; };
+  console.log(map(arr3, constant)); // output: [42, 42, 42]
