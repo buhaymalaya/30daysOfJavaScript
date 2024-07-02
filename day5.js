@@ -34,3 +34,12 @@
 //     -109 <= arr[i] <= 109
 //     fn returns a number
 
+// without using the built-in array.map method - iterate over the array and apply the mapping function to each element
+
+// define the map function, which initializes an empty array result
+// iterate over each element of the input array using a for loop
+// inside the loop - call the function fn with the current element and its index
+// then push the result into the result arr
+// return result array containing the transformed elements
+
+
